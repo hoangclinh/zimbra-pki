@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Tue Mar 04 15:42:43 ICT 2014
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=false
+onejar.checkbox=false
+jarname=CAApplet.jar
+manifest.mergeall=false
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|CAApplet>~lib/;<po|CAApplet>~CAApplet.jar;<po|CAApplet>~ecoitkeystore.ks;<po|CAApplet>~Test.docx;<po|CAApplet>~Test.xml;<po|CAApplet>~testKS;<jar|org.hamcrest.core_1.1.0.v20090501071000.jar>
+includes=
