@@ -1,0 +1,30 @@
+.Imgencrypted{
+ background: url("encrypted.gif") no-repeat 0 0;
+  width: 16px;
+  height: 18px;
+  overflow: hidden;
+}
+.Imgdecrypt{
+ background: url("decrypt.png") no-repeat 0 0;
+  width: 16px;
+  height: 18px;
+  overflow: hidden;
+}
+.Imgsignup{
+ background: url("text_signature.gif") no-repeat 0 0;
+  width: 16px;
+  height: 18px;
+  overflow: hidden;
+}
+.Imgverify1{
+ background: url("veryfy.png") no-repeat 0 0;
+  width: 16px;
+  height: 18px;
+  overflow: hidden;
+}
+.Imgverify{
+ background: url("veryfy1.png") no-repeat 0 0;
+  width: 16px;
+  height: 18px;
+  overflow: hidden;
+}
