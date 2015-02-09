@@ -1,0 +1,16 @@
+* Why must have code signing?
+- Modern browser does not allow run applet without verify.
+- Only one way to verify that code signing.
+
+* Prepare:
+- Keystore have certificate ( with private/public key pair. Keystore may be Java keystore or PKCS12 keystore.
+  //Many people don't know to sign with X509 certificate, so i explain why and how to sign from X509 certificate:
+  // Why? Because X509 only contain Public key. We need private key to sign jar
+  // How? openssl pkcs12 -export -in Cert_quangninh.gov.vn_nacencom/CER_certreq1024.cer -inkey CSR_quangninh.gov.vn_nacencom/quangninhcrt2015/private1024.key -out quangninh.gov.vn.p12 -certfile ca2.cer
+- Jarsigner ( in /jdk/bin/jarsigner)
+
+* To sign:
+- Basic way to sign without TSA that: /usr/java/jdk1.7.0_75/bin/jarsigner -storetype pkcs12  -keystore quangninh.gov.vn.p12 -signedjar CAAppletSimple.jar AppletSimple.jar 1
+
+* Tips:
+- To re-sign applet: open applet by compress tool, delete /META-INF/*.DSA AND /META-INF/*.DSF then re-sign.
