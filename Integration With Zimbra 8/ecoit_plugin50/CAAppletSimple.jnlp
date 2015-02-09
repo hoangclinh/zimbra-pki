@@ -1,0 +1,28 @@
+<jnlp spec="1.0+" codebase="http://mail.zim7.com/zimbra/public/ecoit_plugin50/">
+  <information>
+    <title>Ky So DeMo</title>
+    <vendor>Ky So DeMo</vendor>    
+  </information>
+  <security>
+    <all-permissions/>
+  </security>
+  <update check="background" policy="always"/>
+  <resources>
+    <j2se version="1.7+" href="http://java.sun.com/products/autodl/j2se"/>    
+    <jar href="bcmail-jdk15-1.43.jar" download="eager" main="false"/>
+    <jar href="bcprov-jdk15-1.43.jar" download="eager" main="false"/>
+    <jar href="bctsp-jdk15-1.43.jar" download="eager" main="false"/>
+    <jar href="commons-codec-1.5.jar" download="eager" main="false"/>
+    <jar href="commons-io-2.4.jar" download="eager" main="false"/>
+    <jar href="commons-lang3-3.1.jar" download="eager" main="false"/>
+    <jar href="commons-logging-1.1.jar" download="eager" main="false"/>
+    <jar href="commons-net-3.2.jar" download="eager" main="false"/>
+    <jar href="dom4j-1.6.1.jar" download="eager" main="false"/>
+    <jar href="itext-2.1.7.jar" download="eager" main="false"/>
+    <jar href="jacob-1.14.3.jar" download="eager" main="false"/>
+    <jar href="jaxen-1.1.jar" download="eager" main="false"/>
+    <jar href="log4j-1.2.13.jar" download="eager" main="false"/>
+    <jar href="CAAppletSimple.jar" download="eager" main="true"/>
+  </resources>
+  <applet-desc name="EcoitApplet" main-class="com.ecoit.asia.EcoitApplet" width="300" height="300"/>
+</jnlp>
