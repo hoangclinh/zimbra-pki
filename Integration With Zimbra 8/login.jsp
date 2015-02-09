@@ -33,7 +33,7 @@
 <%!
 
  public static final String DOMAIN_KEY =
-        "21D99DE8-AC5F-11E4-A02D-B1C404979EEC";
+        "7a3658b409246c288777cdfccedf7322c643fb4f2f587ce2904429bb919d0a5b";
 
 
  public static String generateRedirect(HttpServletRequest request, String name) {
@@ -125,7 +125,7 @@ if("POST".equalsIgnoreCase(request.getMethod())){
 %>
 			<sql:setDataSource var="dataSource" driver="com.mysql.jdbc.Driver"
 				url="jdbc:mysql://localhost:7306/zimbra" user="zimbra"
-				password="zgmWfc6K8sZEQ2aa8Ovygh2NVA" />
+				password="R_AoPF52Hv.ejQ.3vc43sdbAoV" />
 			<sql:query dataSource="${dataSource}" var="result">
 			      SELECT * FROM mailbox  where public_key='${ public_key}';
 			</sql:query>

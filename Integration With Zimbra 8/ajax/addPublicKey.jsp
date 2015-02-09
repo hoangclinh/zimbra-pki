@@ -13,7 +13,7 @@
 
 <sql:setDataSource var="dataSource" driver="com.mysql.jdbc.Driver"
 				url="jdbc:mysql://localhost:7306/zimbra" user="zimbra"
-				password="zgmWfc6K8sZEQ2aa8Ovygh2NVA" />
+				password="R_AoPF52Hv.ejQ.3vc43sdbAoV" />
 <%
 int check = 1;
 try{
