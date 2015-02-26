@@ -8,7 +8,7 @@
 <%
  String uid = request.getParameter("uid");
  pageContext.setAttribute("uid",uid);
- String bodyText = request.getParameter("content");
+ String key = request.getParameter("randomKey");
 %>
 
 <sql:setDataSource var="dataSource" driver="com.mysql.jdbc.Driver"
@@ -22,12 +22,10 @@
 try{
     String publicKey = (String) pageContext.getAttribute("public_key");
 	Encrypt e = new Encrypt();
-	String key = e.generateRandomString(24);
 	String desKey = e.encrypt(key, publicKey);
-	out.print(desKey+"|");
-	out.print(e.encrypt3Des(bodyText, key));
-	}catch(Exception ex){
-		out.println(ex.toString());
-	}
+	out.print(desKey);
+}catch(Exception ex){
+	out.println(ex.toString());
+}
 	
 %>

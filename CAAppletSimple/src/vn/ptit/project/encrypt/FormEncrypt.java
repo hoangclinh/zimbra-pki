@@ -22,12 +22,16 @@ import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.spec.KeySpec;
 import java.util.Random;
+
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
+
+import org.apache.commons.codec.binary.Hex;
+
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 import vn.ptit.project.utils.Convert;
@@ -118,10 +122,10 @@ public class FormEncrypt {
         try {
             Cipher cipher = Cipher.getInstance("RSA/ECB/NoPadding");
             cipher.init(Cipher.DECRYPT_MODE, priKey);
-            byte[] b = new BASE64Decoder().decodeBuffer(request);
+            byte[] b = Hex.decodeHex(request.toCharArray());
             byte[] cipherText = cipher.doFinal(b);
             String data = new String(cipherText);
-            return data.substring(data.length() - 100);
+            return data;
         } catch (Exception e) {
             e.printStackTrace();
         }
